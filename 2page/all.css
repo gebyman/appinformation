@@ -87,6 +87,7 @@ body{
     width: 55px;
     height: 55px;
     margin-right: 20px;
+    
 }
 .left{
     position: absolute;
@@ -142,25 +143,33 @@ body{
 }
 
 .star ul {
-    direction: rtl;
-    clear:both;
+    transition-delay: 8s;
+    direction: ltr;
+    clear: both;
+    display: flex;
   }
-.star li{
-      display: inline-block;
-      color: #aaa;
-      transition: .5s;
-      cursor: pointer;
-      clear:both;
-    }
-
-  .star li:hover {
+  
+  ul {
+    display: flex;
+  }
+  
+  .star li a {
+    display: inline-block;
+    color: #aaa;
+    transition: .5s;
+    cursor: pointer;
+    clear: both;
+    text-decoration: none;
+  }
+  
+  .star li:hover a {
     color: #f00;
   }
-  .star  li:hover~li {
-    color: #f00;
+  
+  .star li:hover~li a {
+    color: #ff0000; /* 将其他星星重置为初始颜色 */
   }
-
-
+  
 .appList{
     position: relative;
     padding-top: 60px;
